@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejemplo eventos</title>
+</head>
+
+<body>
+  <h1>Ejemplo de HTML y DOM</h1>
+  <p>Click sobre los botones para ver la hora.</p>
+  <!-- código JS en elemento -->
+  <button onclick='getElementById("demo").innerHTML+="<br>" + Date()'>
+    (a) Usando código JS en atributo HTML</button>
+  <!-- llamada a función JS en elemento -->
+  <button onclick="displayDate()">
+    (b) Usando llamada a función JS en atributo HTML</button>
+  <!-- asignando propiedad al elemento -->
+  <button id="botonHora">
+    (c) Usando propiedad onclick del elemento en javascript</button>
+  <!-- el más completo:  -->
+  <button id="botonHoraOtro">
+    (d) Usando método addEventListener en javascript</button>
+  <hr>
+  <p>Este último botón elimina uno de los dos métodos asociados al botón d). En concreto elimina displayDate, por lo que tras pulsarlo no se añaden neuvas línea con la hora, pero si se modifica de forma aleatoria el tamaño. Ademas el botón d) tiene asociadas funciones que cambian el color cuando tiene el foco o cuando lo pierde (verde/hegro)</p>
+  <button id="botonBorraEvento">
+    (e) Borrar Evento displayDate de (d)</button>
+  <hr>
+  <!--  Elemento vacío que se rellena... -->
+  <p id="demo">
+  </p>
+  <!-- Código javasccript -->
+  <script src="dom-010-clase.js">
+  </script>
+</body>
+
+</html>

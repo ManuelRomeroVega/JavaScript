@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo validaciรณn formulario</title>
+  <style>
+    input {
+      display: block; margin-bottom:1em;
+    }
+  </style>
+  <script type="text/javascript" src="valida_formularios.js">
+  </script>
+</head>
+
+<body>
+  <h1>Ejemplo validación formulario</h1>
+  <!-- Pruebas con distintas funciones 
+        onsubmit="return checkForm0();
+        onsubmit="return checkForm1();
+        onsubmit="return checkForm2();
+        onsubmit="return checkForm3(this);    -->
+  <form id="formulario" onsubmit="return checkForm0();" action="valida.php">
+    <label>Usuario: <input id="username" type="text" name="username"> </label>
+    <label>Clave: <input id="pwd1" type="password" name="pwd1"> </label>
+    <label>Confirma clave: <input id="pwd2" type="password" name="pwd2"> </label>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+
+</html>
